@@ -6,7 +6,7 @@ const prductSchema=new Schema({
     productName:{
 type:String,
 required:true,
-
+ 
 maxLength:25,
 enum:["TV","PC","mobile","pendrive"]
 

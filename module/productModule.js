@@ -8,7 +8,7 @@ exports.postProduct = async (req,res,next) => {
                          description: Joi.string().max(250), 
                          userquantity: Joi.number().required() 
                     })
- var {error} = await schema.validate(req.body); 
+ var {error} = await schema.validate(req.body);  
 if(error) {
     const msg = error.details.map(el => el.message).join(',')
     return res.status(400).send(msg); 
@@ -19,7 +19,7 @@ const product=new Product({
     quantity:req.body.quantity,
     price:req.body.price,
     description:req.body.description,
-    userquantity:req.body.userquantity
+    userquantity:req.body.userquantity 
 })
 try{
     var response=await product.save()

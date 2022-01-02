@@ -3,7 +3,7 @@ const jwt = require ('jsonwebtoken')
 exports.AuthorizeUser = async (req,res,next) =>{ 
    // Cneck wnetner token exists
     if(!req.headers["token"]) {
-    return res.status(401).send({msg : "Unauthorised"}); 
+    return res.status(401).send({msg :  "Unauthorised"}); 
     }
     // Verify Token
     else{
@@ -12,7 +12,7 @@ exports.AuthorizeUser = async (req,res,next) =>{
             next();
             } 
             catch(err)
-            { 
+            {  
                 res.send(err); 
        } 
     }

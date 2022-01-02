@@ -8,3 +8,4 @@ router.get('/getproduct', productModule.getProduct)
 router.patch('/updateproduct/:productId', productModule.updateProduct)
 router.delete('/deleteproduct/:productId', productModule.deleteProduct)
 module.exports = router;
+ 
